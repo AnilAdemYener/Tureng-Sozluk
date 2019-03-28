@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    background-color: #E5E7E9;
+}
+
+#header {
+    width: 100%;
+    height: 75px;
+    border-top: 5px solid #F9E79F;
+    background-color: #F1C40F;
+}
+
+#header #top {
+    width: 800px;
+    height: 75px;
+    margin: 0 auto;
+    background-color: #F9E79F;
+}
+
+#header #top #logo
+{
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: 50px 50px;
+    background-repeat: none;
+    background-position: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+#header #top h2 {
+    margin-right: 50px;
+    line-height: 35px;
+    font-family: Verdana;
+    float: right;
+}
+
+#container {
+    width: 800px;
+    //height: 500px;
+    background-color: white;
+    //background-color: #E5E7E9;
+    margin: 0 auto;
+}
+
+#container .button {
+	border: 0px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	width: 32.2%;
+	height: 50px;
+}
+
+#container .button:hover {
+	border: 1px solid #B7950B;
+	background-color: white;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    #header {
+        height: 25px;
+    }
+
+    #header #top {
+        width: 100%;
+        height: 25px;
+    }
+
+    #header #top #logo {
+        width: 25px;
+        height: 25px;
+        margin: 0px;
+        background-size: 25px 25px;
+        margin-left: 10px;
+    }
+
+    #header #top h2 {
+        font-size: 15px;
+        line-height: 0px;
+    }
+}
