@@ -10,9 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div id="header">
+            <?php
+                include "test.php";
+            ?>
             <div id="top">
                 <a href="index.aspx"><div id="logo"></div></a>
-                <h2>Tureng Sözlük</h2>
+                <a href="index.aspx"><h2>Tureng Sözlük</h2></a>
             </div>
         </div>
         <div id="container">

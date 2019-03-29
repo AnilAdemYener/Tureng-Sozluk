@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="renkler.aspx.cs" Inherits="renkler" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="fransizca_sayilar.aspx.cs" Inherits="renkler" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +10,7 @@
             .style2
             {
                 width: 185px;
-                height: 103px;
+                height: 41px;
             }
             .style3
             {
@@ -22,17 +22,21 @@
             }
             .style5
             {
-                height: 103px;
+                height: 41px;
                 width: 224px;
             }
             .style6
             {
-                height: 103px;
+                height: 41px;
                 width: 120px;
             }
             .style7
             {
                 width: 211px;
+            }
+            .style8
+            {
+                height: 41px;
             }
         </style>
 </head>
@@ -48,7 +52,7 @@
             <table style="width:100%;">
                 <tr>
                     <td class="style3">
-                        <asp:Label ID="Label1" runat="server" Text="Resim" Font-Bold="True" 
+                        <asp:Label ID="Label1" runat="server" Text="Sayı" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
                     <td class="style4">
@@ -60,26 +64,26 @@
                             Font-Size="X-Large"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="Fransızca İçin" Font-Bold="True" 
+                        <asp:Label ID="Label4" runat="server" Text="Fransızca" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
                 </tr>
             </table>
             <asp:DataList ID="DataList1" runat="server" Width="793px">
                 <ItemTemplate>
-                    <table style="width:100%; margin-bottom: 7px;">
+                    <table style="width:100%; margin-bottom: 7px; ">
                         <tr>
                             <td class="style6">
-                                <asp:Image ID="Image1" ImageUrl='<%# "~/images/"+Eval("renk_resim").ToString() %>' runat="server" Height="100px" Width="100px" />
+                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("sayi").ToString() %>'></asp:Label>
                             </td>
                             <td class="style2">
-                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("renk_turkce").ToString() %>'></asp:Label>
+                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("sayi_turkce").ToString() %>'></asp:Label>
                             </td>
                             <td class="style5">
-                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("renk_ingilizce").ToString() %>'></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("sayi_ingilizce").ToString() %>'></asp:Label>
                             </td>
-                            <td>
-                                <asp:LinkButton ID="LinkButton1" PostBackUrl=<%# "~/fransizca_renkler.aspx?id="+Eval("renk_turkce").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
+                            <td class="style8">
+                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("sayi_fransizca").ToString() %>'></asp:Label>
                             </td>
                         </tr>
                     </table>

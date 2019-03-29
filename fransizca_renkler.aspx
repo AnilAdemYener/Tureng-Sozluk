@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="renkler.aspx.cs" Inherits="renkler" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="fransizca_renkler.aspx.cs" Inherits="renkler" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -60,7 +60,7 @@
                             Font-Size="X-Large"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="Fransızca İçin" Font-Bold="True" 
+                        <asp:Label ID="Label4" runat="server" Text="Fransızca" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
                 </tr>
@@ -79,7 +79,7 @@
                                 <asp:Label ID="Label6" runat="server" Text='<%# Eval("renk_ingilizce").ToString() %>'></asp:Label>
                             </td>
                             <td>
-                                <asp:LinkButton ID="LinkButton1" PostBackUrl=<%# "~/fransizca_renkler.aspx?id="+Eval("renk_turkce").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
+                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("renk_fransizca").ToString() %>'></asp:Label>
                             </td>
                         </tr>
                     </table>
