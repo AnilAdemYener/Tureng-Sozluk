@@ -7,21 +7,36 @@
         <title>Tureng Sözlük - Adem Yener</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style type="text/css">
-            .style1
-            {
-                width: 238px;
-            }
             .style2
             {
-                width: 262px;
+                width: 185px;
+                height: 41px;
             }
             .style3
             {
-                width: 230px;
+                width: 116px;
             }
             .style4
             {
-                width: 263px;
+                width: 183px;
+            }
+            .style5
+            {
+                height: 41px;
+                width: 224px;
+            }
+            .style6
+            {
+                height: 41px;
+                width: 120px;
+            }
+            .style7
+            {
+                width: 211px;
+            }
+            .style8
+            {
+                height: 41px;
             }
         </style>
 </head>
@@ -30,38 +45,42 @@
         <div id="header">
             <div id="top">
                 <a href="index.aspx"><div id="logo"></div></a>
-                <h2>Tureng Sözlük</h2>
+                <a href="index.aspx"><h2>Tureng Sözlük</h2></a>
             </div>
         </div>
         <div id="container">
             <table style="width:100%;">
                 <tr>
                     <td class="style3">
-                        <asp:Label ID="Label1" runat="server" Text="Resim" Font-Bold="True" 
-                            Font-Size="X-Large"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td class="style4">
                         <asp:Label ID="Label2" runat="server" Text="Türkçe" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
-                    <td>
+                    <td class="style7">
                         <asp:Label ID="Label3" runat="server" Text="İngilizce" Font-Bold="True" 
+                            Font-Size="X-Large"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Fransızca İçin" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
                 </tr>
             </table>
             <asp:DataList ID="DataList1" runat="server" Width="793px">
                 <ItemTemplate>
-                    <table style="width:100%;">
+                    <table style="width:100%; margin-bottom: 7px; ">
                         <tr>
-                            <td class="style1">
-                                <asp:Image ID="Image1" ImageUrl='<%# "~/images/"+Eval("renk_resim").ToString() %>' runat="server" Height="100px" Width="100px" />
-                            </td>
+                            <td class="style6">
+                                &nbsp;</td>
                             <td class="style2">
-                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("renk_turkce").ToString() %>'></asp:Label>
+                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("aile_turkce").ToString() %>'></asp:Label>
                             </td>
-                            <td>
-                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("renk_ingilizce").ToString() %>'></asp:Label>
+                            <td class="style5">
+                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("aile_ingilizce").ToString() %>'></asp:Label>
+                            </td>
+                            <td class="style8">
+                                <asp:LinkButton class="linkbutton" ID="LinkButton1" PostBackUrl=<%# "~/fransizca_aile_bireyleri.aspx?id="+Eval("aile_turkce").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
                             </td>
                         </tr>
                     </table>

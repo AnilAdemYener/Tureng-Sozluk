@@ -9,16 +9,18 @@
         <style type="text/css">
             .style2
             {
-                width: 185px;
+                width: 174px;
                 height: 41px;
             }
             .style3
             {
-                width: 125px;
+                width: 120px;
+                height: 30px;
             }
             .style4
             {
-                width: 183px;
+                width: 170px;
+                height: 30px;
             }
             .style5
             {
@@ -33,10 +35,23 @@
             .style7
             {
                 width: 211px;
+                height: 30px;
             }
             .style8
             {
                 height: 41px;
+            }
+            .style9
+            {
+                height: 30px;
+            }
+            .style11
+            {
+                width: 50px;
+            }
+            .style12
+            {
+                width: 41px;
             }
         </style>
 </head>
@@ -51,6 +66,8 @@
         <div id="container">
             <table style="width:100%;">
                 <tr>
+                    <td class="style12">
+                        &nbsp;</td>
                     <td class="style3">
                         <asp:Label ID="Label1" runat="server" Text="Sayı" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
@@ -63,7 +80,7 @@
                         <asp:Label ID="Label3" runat="server" Text="İngilizce" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
-                    <td>
+                    <td class="style9">
                         <asp:Label ID="Label4" runat="server" Text="Fransızca İçin" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
                     </td>
@@ -73,6 +90,8 @@
                 <ItemTemplate>
                     <table style="width:100%; margin-bottom: 7px; ">
                         <tr>
+                            <td class="style11" >
+                                &nbsp;</td>
                             <td class="style6">
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("sayi").ToString() %>'></asp:Label>
                             </td>
@@ -83,7 +102,7 @@
                                 <asp:Label ID="Label6" runat="server" Text='<%# Eval("sayi_ingilizce").ToString() %>'></asp:Label>
                             </td>
                             <td class="style8">
-                                <asp:LinkButton ID="LinkButton1" PostBackUrl=<%# "~/fransizca_sayilar.aspx?id="+Eval("sayi").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
+                                <asp:LinkButton class="linkbutton" ID="LinkButton1" PostBackUrl=<%# "~/fransizca_sayilar.aspx?id="+Eval("sayi").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
                             </td>
                         </tr>
                     </table>

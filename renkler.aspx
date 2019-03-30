@@ -79,7 +79,7 @@
                                 <asp:Label ID="Label6" runat="server" Text='<%# Eval("renk_ingilizce").ToString() %>'></asp:Label>
                             </td>
                             <td>
-                                <asp:LinkButton ID="LinkButton1" PostBackUrl=<%# "~/fransizca_renkler.aspx?id="+Eval("renk_turkce").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
+                                <asp:LinkButton class="linkbutton" ID="LinkButton1" PostBackUrl=<%# "~/fransizca_renkler.aspx?id="+Eval("renk_turkce").ToString() %> runat="server">Fransızca&#39;sı için tıklayın.</asp:LinkButton>
                             </td>
                         </tr>
                     </table>

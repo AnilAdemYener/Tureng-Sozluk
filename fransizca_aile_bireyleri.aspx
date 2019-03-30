@@ -1,0 +1,92 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="fransizca_aile_bireyleri.aspx.cs" Inherits="renkler" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <title>Tureng Sözlük - Adem Yener</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style type="text/css">
+            .style2
+            {
+                width: 185px;
+                height: 41px;
+            }
+            .style3
+            {
+                width: 116px;
+            }
+            .style4
+            {
+                width: 183px;
+            }
+            .style5
+            {
+                height: 41px;
+                width: 224px;
+            }
+            .style6
+            {
+                height: 41px;
+                width: 120px;
+            }
+            .style7
+            {
+                width: 211px;
+            }
+            .style8
+            {
+                height: 41px;
+            }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <div id="top">
+                <a href="index.aspx"><div id="logo"></div></a>
+                <a href="index.aspx"><h2>Tureng Sözlük</h2></a>
+            </div>
+        </div>
+        <div id="container">
+            <table style="width:100%;">
+                <tr>
+                    <td class="style3">
+                        &nbsp;</td>
+                    <td class="style4">
+                        <asp:Label ID="Label2" runat="server" Text="Türkçe" Font-Bold="True" 
+                            Font-Size="X-Large"></asp:Label>
+                    </td>
+                    <td class="style7">
+                        <asp:Label ID="Label3" runat="server" Text="İngilizce" Font-Bold="True" 
+                            Font-Size="X-Large"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Fransızca" Font-Bold="True" 
+                            Font-Size="X-Large"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            <asp:DataList ID="DataList1" runat="server" Width="793px">
+                <ItemTemplate>
+                    <table style="width:100%; margin-bottom: 7px; ">
+                        <tr>
+                            <td class="style6">
+                                &nbsp;</td>
+                            <td class="style2">
+                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("aile_turkce").ToString() %>'></asp:Label>
+                            </td>
+                            <td class="style5">
+                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("aile_ingilizce").ToString() %>'></asp:Label>
+                            </td>
+                            <td class="style8">
+                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("aile_fransizca").ToString() %>'></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </ItemTemplate>
+            </asp:DataList>
+        </div>
+    </form>
+</body>
+</html>

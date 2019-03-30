@@ -38,6 +38,14 @@
             {
                 height: 41px;
             }
+            .style11
+            {
+                width: 50px;
+            }
+            .style12
+            {
+                width: 41px;
+            }
         </style>
 </head>
 <body>
@@ -51,6 +59,8 @@
         <div id="container">
             <table style="width:100%;">
                 <tr>
+                    <td class="style12">
+                        &nbsp;</td>
                     <td class="style3">
                         <asp:Label ID="Label1" runat="server" Text="Sayı" Font-Bold="True" 
                             Font-Size="X-Large"></asp:Label>
@@ -73,6 +83,8 @@
                 <ItemTemplate>
                     <table style="width:100%; margin-bottom: 7px; ">
                         <tr>
+                            <td class="style11" >
+                                &nbsp;</td>
                             <td class="style6">
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("sayi").ToString() %>'></asp:Label>
                             </td>

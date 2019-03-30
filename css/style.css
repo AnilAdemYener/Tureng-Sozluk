@@ -8,6 +8,7 @@ body {
     height: 75px;
     border-top: 5px solid #F9E79F;
     background-color: #F1C40F;
+    border-bottom: 5px solid #F9E79F;
 }
 
 #header #top {
@@ -71,6 +72,19 @@ body {
 	border: 1px solid #B7950B;
 	background-color: white;
 	cursor: pointer;
+}
+
+.linkbutton
+{
+    text-decoration: none;
+    color: #7d6608;    
+}
+
+.linkbutton:hover
+{
+    font-size: 20px;
+    color: #b7950b;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 800px) {

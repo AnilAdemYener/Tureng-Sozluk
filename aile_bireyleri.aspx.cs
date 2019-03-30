@@ -12,7 +12,7 @@ public partial class renkler : System.Web.UI.Page
     {
         OleDbConnection cnn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+Server.MapPath("~/App_Data/adem.accdb"));
         cnn.Open();
-        OleDbCommand cmd = new OleDbCommand("select * from renkler",cnn);
+        OleDbCommand cmd = new OleDbCommand("select * from aile_bireyleri",cnn);
         OleDbDataReader reader = cmd.ExecuteReader();
         DataList1.DataSource = reader;
         DataList1.DataBind();
